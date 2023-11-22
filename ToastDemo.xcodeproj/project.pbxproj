@@ -14,6 +14,10 @@
 		ECE39CC92B0E9FF5006962F4 /* ToastDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CC82B0E9FF5006962F4 /* ToastDemoTests.swift */; };
 		ECE39CD32B0E9FF5006962F4 /* ToastDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CD22B0E9FF5006962F4 /* ToastDemoUITests.swift */; };
 		ECE39CD52B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CD42B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift */; };
+		ECE39CEA2B0EA398006962F4 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CE92B0EA398006962F4 /* ToastManager.swift */; };
+		ECE39CEC2B0EA4A3006962F4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CEB2B0EA4A3006962F4 /* View.swift */; };
+		ECE39CEE2B0EA4BB006962F4 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CED2B0EA4BB006962F4 /* ToastView.swift */; };
+		ECE39CF02B0EA4D2006962F4 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CEF2B0EA4D2006962F4 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		ECE39CCE2B0E9FF5006962F4 /* ToastDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE39CD22B0E9FF5006962F4 /* ToastDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDemoUITests.swift; sourceTree = "<group>"; };
 		ECE39CD42B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECE39CE92B0EA398006962F4 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		ECE39CEB2B0EA4A3006962F4 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		ECE39CED2B0EA4BB006962F4 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		ECE39CEF2B0EA4D2006962F4 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +82,10 @@
 		ECE39CAB2B0E9FF4006962F4 = {
 			isa = PBXGroup;
 			children = (
+				ECE39CB52B0E9FF4006962F4 /* Products */,
 				ECE39CB62B0E9FF4006962F4 /* ToastDemo */,
 				ECE39CC72B0E9FF5006962F4 /* ToastDemoTests */,
 				ECE39CD12B0E9FF5006962F4 /* ToastDemoUITests */,
-				ECE39CB52B0E9FF4006962F4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +102,12 @@
 		ECE39CB62B0E9FF4006962F4 /* ToastDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ECE39CB72B0E9FF4006962F4 /* ToastDemoApp.swift */,
 				ECE39CB92B0E9FF4006962F4 /* ContentView.swift */,
+				ECE39CEF2B0EA4D2006962F4 /* Toast.swift */,
+				ECE39CB72B0E9FF4006962F4 /* ToastDemoApp.swift */,
+				ECE39CE92B0EA398006962F4 /* ToastManager.swift */,
+				ECE39CED2B0EA4BB006962F4 /* ToastView.swift */,
+				ECE39CEB2B0EA4A3006962F4 /* View.swift */,
 				ECE39CBB2B0E9FF5006962F4 /* Assets.xcassets */,
 				ECE39CBD2B0E9FF5006962F4 /* Preview Content */,
 			);
@@ -257,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE39CEC2B0EA4A3006962F4 /* View.swift in Sources */,
+				ECE39CF02B0EA4D2006962F4 /* Toast.swift in Sources */,
+				ECE39CEA2B0EA398006962F4 /* ToastManager.swift in Sources */,
 				ECE39CBA2B0E9FF4006962F4 /* ContentView.swift in Sources */,
 				ECE39CB82B0E9FF4006962F4 /* ToastDemoApp.swift in Sources */,
+				ECE39CEE2B0EA4BB006962F4 /* ToastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

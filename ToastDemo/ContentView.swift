@@ -8,17 +8,78 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @EnvironmentObject var toastManager: ToastManager
 
-#Preview {
-    ContentView()
+    var body: some View {
+        /* EmptyView()
+            .background(.red)
+            .sheet(isPresented: .constant(true)) {
+                VStack {
+                    Button(action: {
+                        toastManager.show(toast: "Text Text Text Text Text Text Text")
+                    }, label: {
+                        Text("SHORT TEXT TOAST")
+                    })
+                    .buttonStyle(.bordered)
+
+                    Button(action: {
+                        toastManager.show(
+                            toast: """
+                            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text \
+                            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                            """)
+                    }, label: {
+                        Text("LONG TEXT TOAST")
+                    })
+                    .buttonStyle(.bordered)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } */
+
+         /* EmptyView()
+            .background(.red)
+            .fullScreenCover(isPresented: .constant(true)) {
+                VStack {
+                    Button(action: {
+                        toastManager.show(toast: "Text Text Text Text Text Text Text")
+                    }, label: {
+                        Text("SHORT TEXT TOAST")
+                    })
+                    .buttonStyle(.bordered)
+
+                    Button(action: {
+                        toastManager.show(
+                            toast: """
+                            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text \
+                            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                            """)
+                    }, label: {
+                        Text("LONG TEXT TOAST")
+                    })
+                    .buttonStyle(.bordered)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } */
+
+        VStack {
+            Button(action: {
+                toastManager.show(toast: "Text Text Text Text Text Text Text")
+            }, label: {
+                Text("SHORT TEXT TOAST")
+            })
+            .buttonStyle(.bordered)
+
+            Button(action: {
+                toastManager.show(
+                    toast: """
+                    Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text \
+                    Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+                    """)
+            }, label: {
+                Text("LONG TEXT TOAST")
+            })
+            .buttonStyle(.bordered)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }
