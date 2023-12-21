@@ -14,7 +14,7 @@ struct ToastDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .toastView(isPresented: $toastManager.showToast, message: toastManager.lastToast)
+                .overlayModal(isPresented: $toastManager.showToast, modalContent: toastManager.toastView)
                 .environmentObject(toastManager)
         }
     }

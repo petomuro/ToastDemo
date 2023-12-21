@@ -1,5 +1,5 @@
 //
-//  ToastView.swift
+//  Toast.swift
 //  ToastDemo
 //
 //  Created by Peter Murín on 22/11/2023.

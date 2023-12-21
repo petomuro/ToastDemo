@@ -1,5 +1,5 @@
 //
-//  OverlayModalView.swift
+//  OverlayView.swift
 //  ToastDemo
 //
 //  Created by Peter Murín on 21/12/2023.

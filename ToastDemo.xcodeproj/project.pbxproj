@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECA3CA9D2B34742900DB88C7 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3CA9C2B34742900DB88C7 /* OverlayView.swift */; };
 		ECE39CB82B0E9FF4006962F4 /* ToastDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CB72B0E9FF4006962F4 /* ToastDemoApp.swift */; };
 		ECE39CBA2B0E9FF4006962F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CB92B0E9FF4006962F4 /* ContentView.swift */; };
 		ECE39CBC2B0E9FF5006962F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE39CBB2B0E9FF5006962F4 /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		ECE39CD52B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CD42B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift */; };
 		ECE39CEA2B0EA398006962F4 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CE92B0EA398006962F4 /* ToastManager.swift */; };
 		ECE39CEC2B0EA4A3006962F4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CEB2B0EA4A3006962F4 /* View.swift */; };
-		ECE39CEE2B0EA4BB006962F4 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CED2B0EA4BB006962F4 /* ToastView.swift */; };
 		ECE39CF02B0EA4D2006962F4 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE39CEF2B0EA4D2006962F4 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ECA3CA9C2B34742900DB88C7 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		ECE39CB42B0E9FF4006962F4 /* ToastDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE39CB72B0E9FF4006962F4 /* ToastDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDemoApp.swift; sourceTree = "<group>"; };
 		ECE39CB92B0E9FF4006962F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		ECE39CD42B0E9FF5006962F4 /* ToastDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ECE39CE92B0EA398006962F4 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 		ECE39CEB2B0EA4A3006962F4 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		ECE39CED2B0EA4BB006962F4 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		ECE39CEF2B0EA4D2006962F4 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,11 +102,11 @@
 		ECE39CB62B0E9FF4006962F4 /* ToastDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ECA3CA9C2B34742900DB88C7 /* OverlayView.swift */,
 				ECE39CB92B0E9FF4006962F4 /* ContentView.swift */,
 				ECE39CEF2B0EA4D2006962F4 /* Toast.swift */,
 				ECE39CB72B0E9FF4006962F4 /* ToastDemoApp.swift */,
 				ECE39CE92B0EA398006962F4 /* ToastManager.swift */,
-				ECE39CED2B0EA4BB006962F4 /* ToastView.swift */,
 				ECE39CEB2B0EA4A3006962F4 /* View.swift */,
 				ECE39CBB2B0E9FF5006962F4 /* Assets.xcassets */,
 				ECE39CBD2B0E9FF5006962F4 /* Preview Content */,
@@ -272,9 +272,9 @@
 				ECE39CEC2B0EA4A3006962F4 /* View.swift in Sources */,
 				ECE39CF02B0EA4D2006962F4 /* Toast.swift in Sources */,
 				ECE39CEA2B0EA398006962F4 /* ToastManager.swift in Sources */,
+				ECA3CA9D2B34742900DB88C7 /* OverlayView.swift in Sources */,
 				ECE39CBA2B0E9FF4006962F4 /* ContentView.swift in Sources */,
 				ECE39CB82B0E9FF4006962F4 /* ToastDemoApp.swift in Sources */,
-				ECE39CEE2B0EA4BB006962F4 /* ToastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

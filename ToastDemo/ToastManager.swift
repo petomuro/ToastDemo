@@ -8,29 +8,41 @@
 import SwiftUI
 
 class ToastManager: ObservableObject {
-    @Published var lastToast: String?
-    @Published var showToast = false
+    @Published public var showToast: Bool = false
 
-    init(lastToast: String? = nil, showToast: Bool = false) {
-        self.lastToast = lastToast
-        self.showToast = showToast
+    public var toasts: [String] = [] {
+        didSet {
+            if toasts.isEmpty {
+                showToast = false
+            } else {
+                showToast = true
+            }
+        }
     }
 
     func show(toast: String) {
-        lastToast = toast
-
-        withAnimation {
-            showToast = true
-        }
+        toasts.insert(toast, at: 0)
 
         Task {
             try await Task.sleep(nanoseconds: 4_000_000_000)
 
             await MainActor.run {
-                withAnimation {
-                    showToast = false
-                }
+                closeToast()
             }
+        }
+    }
+
+    func toastView() -> some View {
+        if let toast = toasts.first {
+            return Toast(toast: toast)
+        }
+
+        return Toast(toast: "")
+    }
+
+    func closeToast() {
+        if !toasts.isEmpty {
+            toasts.removeLast()
         }
     }
 }
