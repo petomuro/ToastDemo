@@ -28,3 +28,13 @@ struct OverlayView<OverlayContent: View>: ViewModifier {
         }
     }
 }
+
+struct OverlayView_Previews: PreviewProvider {
+    @StateObject static var toastManager = ToastManager()
+
+    static var previews: some View {
+        ContentView()
+            .overlayModal(isPresented: .constant(true), modalContent: toastManager.toastView)
+            .environmentObject(toastManager)
+    }
+}

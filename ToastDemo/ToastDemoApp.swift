@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ToastDemoApp: App {
     @StateObject private var toastManager = ToastManager()
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -41,3 +41,12 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    @StateObject static var toastManager = ToastManager()
+
+    static var previews: some View {
+        ContentView()
+            .environmentObject(toastManager)
+    }
+}

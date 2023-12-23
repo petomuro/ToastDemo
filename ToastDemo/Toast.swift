@@ -63,11 +63,11 @@ private extension Toast {
 
         // TODO: This cause strange behavior but I need to clear that hostingController somehow
         /* Task {
-            try await Task.sleep(nanoseconds: 300_000_000)
+         try await Task.sleep(nanoseconds: 300_000_000)
 
-            hostingController?.view.removeFromSuperview()
-            hostingController = nil
-        } */
+         hostingController?.view.removeFromSuperview()
+         hostingController = nil
+         } */
     }
 }
 
@@ -112,4 +112,8 @@ private extension Toast {
         .padding(.vertical, 30)
         .padding(.horizontal, 20)
     }
+}
+
+#Preview {
+    Toast(toast: "")
 }
