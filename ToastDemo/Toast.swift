@@ -61,13 +61,14 @@ private extension Toast {
             hostingController?.view.alpha = 0
         }
 
-        // TODO: This cause strange behavior but I need to clear that hostingController somehow
-        /* Task {
-         try await Task.sleep(nanoseconds: 300_000_000)
+        Task {
+            try await Task.sleep(nanoseconds: 8_000_000_000)
 
-         hostingController?.view.removeFromSuperview()
-         hostingController = nil
-         } */
+            await MainActor.run {
+                hostingController?.view.removeFromSuperview()
+                hostingController = nil
+            }
+        }
     }
 }
 
